@@ -14,20 +14,20 @@ SportSee is a web app that will permit its users to follow-up their sport activi
 
 ## Installation
 
-### Clone the following repository on your computer
+### 1.Clone the following repository on your computer
 git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
-2.	Launching the back-end
-•	The yarn command will allow you to install the dependencies.
-•	The yarn start command will allow you to run the micro API on port 3000
+### 2.Launching the back-end
+#### The yarn command will allow you to install the dependencies.
+#### The yarn start command will allow you to run the micro API on port 3000
 
-3.	Clone this repository on your computer :
+### 3.	Clone this repository on your computer :
 
 git clone https://github.com/Floriansaliba/sportsee
 
-4. The yarn command will allow you to install the dependencies.
+### 4. The yarn command will allow you to install the dependencies.
 
-5. yarn start (choose port 3001) will allow you to launch the app on your browser
+### 5. yarn start (choose port 3001) will allow you to launch the app on your browser
 
 
 ## End-points
