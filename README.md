@@ -14,7 +14,7 @@ SportSee is a web app that will permit its users to follow-up their sport activi
 
 ## Installation
 
-###Clone the following repository on your computer
+### Clone the following repository on your computer
 git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
 2.	Launching the back-end
