@@ -1,5 +1,6 @@
 import "./Welcome.css"
 import { useParams } from "react-router-dom";
+import USER_MAIN_DATA from "../../mock/user_main_data"
 
 const Welcome = ()=>{
 

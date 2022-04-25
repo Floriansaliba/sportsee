@@ -20,7 +20,7 @@ export async function fetchActivityData(userId, setStatistics) {
 
 /**
  * This function fetch user performance data from API
- * @param {Number} userId user number
+ * @param {Number} userId user number returned by useParams
  * @param {Function} setStatistics ustates method that will save data received from the API
  */
 
