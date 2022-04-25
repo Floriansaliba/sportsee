@@ -12,7 +12,7 @@ import {
   ResponsiveContainer
 } from "recharts";
 import PropTypes from 'prop-types';
-import { fetchActivityData } from "../../API_calls/APIcall";  
+import { fetchData } from "../../API_calls/APIcall";  
 
 export default function WeightFollowUp() {
    const {userId} = useParams()
@@ -21,7 +21,7 @@ console.log(userId)
 console.log(setStatistics)
 
   useEffect(()=>{
-    fetchActivityData(userId, setStatistics)
+    fetchData(userId, setStatistics, "activity")
   }, [])
 
 

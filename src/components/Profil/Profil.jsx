@@ -10,7 +10,6 @@ import {
   PolarAngleAxis,
   ResponsiveContainer,
 } from "recharts";
-import { fetchPerformanceData } from "../../API_calls/APIcall";
 
 
 export default function Profil() {
@@ -19,7 +18,7 @@ export default function Profil() {
     const [statistics, setStatistics] = useState(null)
 
     useEffect(()=>{
-      fetchPerformanceData(userId, setStatistics)
+      fetchData(userId, setStatistics, "performance")
     }, [])
 
   /**

@@ -1,14 +1,21 @@
 /**
- * This function fetch user activity data from API
+ * This function fetch user activity or performance data from API
  * @param {Number} userId user number
  * @param {Function} setStatistics ustates method that will save data received from the API
+ * @param {string} resource  end of pathname depending on the required endpoint
  */
 
-export async function fetchActivityData(userId, setStatistics) {
+
+  export async function fetchData(userId, setStatistics, resource) {
     try{
-      const response = await fetch (`http://localhost:3000/user/${userId}/activity`)
+      const response = await fetch (`http://localhost:3000/user/${userId}/${resource}`)
       const results = await response.json()
-      setStatistics(results.data.sessions)
+      if(resource === "activity"){
+        setStatistics(results.data.sessions)
+      }
+      else if(resource === "performance"){
+        setStatistics(results.data)
+      }      
     }
     catch(err){
       console.log(err)
@@ -18,26 +25,6 @@ export async function fetchActivityData(userId, setStatistics) {
     }
   }
 
-/**
- * This function fetch user performance data from API
- * @param {Number} userId user number returned by useParams
- * @param {Function} setStatistics ustates method that will save data received from the API
- */
-
- export async function fetchPerformanceData(userId, setStatistics) {
-    try{
-      const response = await fetch (`http://localhost:3000/user/${userId}/performance`)
-      const results = await response.json()
-      setStatistics(results.data)
-      console.log(results.data)
-    }
-    catch(err){
-      console.log(err)
-    }
-    finally{
-      console.log("Fetch completed")
-    }
-  }
 
 
   /**
