@@ -21,7 +21,7 @@ ReactDOM.render(
       />
       <Route path="/user/:userId/today-score" element={<TodayScore />} />
       <Route path="/user/:userId/activities" element={<UserProfil />} />
-      <Route path="/user/:userId/key-data" element={<UserKeyData />} />
+      <Route path="/user/:userId/key-data " element={<UserKeyData />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")

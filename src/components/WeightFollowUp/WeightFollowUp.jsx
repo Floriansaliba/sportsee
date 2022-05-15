@@ -18,7 +18,6 @@ export default function WeightFollowUp() {
    const {userId} = useParams()
    const [statistics, setStatistics] = useState(null)
 console.log(userId)
-console.log(setStatistics)
 
   useEffect(()=>{
     fetchData(userId, setStatistics, "activity")

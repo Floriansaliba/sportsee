@@ -11,6 +11,8 @@ import {
   ResponsiveContainer
 } from "recharts";
 import PropTypes from 'prop-types';
+import { fetchAverageSession, fetchData } from "../../API_calls/APIcall";
+
 
 
 export default function App() {
@@ -19,21 +21,7 @@ export default function App() {
   const [statistics, setStatistics] = useState(null)
 
   useEffect(()=>{
-    async function fetchSurvey() {
-      try{
-        const response = await fetch (`http://localhost:3000/user/${userId}/average-sessions`)
-        const results = await response.json()
-        setStatistics(results.data.sessions)
-        console.log(results.data.sessions)
-      }
-      catch(err){
-        console.log(err)
-      }
-      finally{
-        console.log("Fetch completed")
-      }
-    }
-    fetchSurvey()
+    fetchData(userId, setStatistics, "average-sessions")
   }, [])
 
   /**

@@ -25,8 +25,9 @@ export default function Profil() {
    * Transform data received from API in order to use them as input in the radar chart
    * @returns Array of objects representing input data for the radar chart
    */
+
     function formatData() {
-    const dataToUSe = statistics.data.reverse().map((object) => {
+    const dataToUSe = statistics.reverse().map((object) => {
       if (object.kind === 1) {
         return {
           kind: 'Cardio',

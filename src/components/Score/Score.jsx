@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import "./Score.css"
 import { fetchScoreData } from "../../API_calls/APIcall";
 
+
 export default function Score() {
 
   const {userId} = useParams()
